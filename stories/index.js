@@ -165,7 +165,7 @@ storiesOf("Button", module)
         onClose={action("onClose")} />))
         .add("Edit", () => 
         <Form
-        name="Casey Bass"
+        name="Archie Cohen"
         interviewers={interviewers}
         interviewer={interviewer.id}
         onSave={action("onSave")}
