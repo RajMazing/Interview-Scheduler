@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import "./styles.scss"
 
 import Header from "components/Appointment/Header";
@@ -13,13 +13,13 @@ export default function Appointment(props) {
 
   return( 
     <article className="appointment">
-        <Header time={props.time} />
+        <Header  />
+        {props.time && <Fragment>Appointment at {props.time}</Fragment>}
+{!props.time && <Fragment>No Appointments</Fragment>} 
         {props.interview ?
         <Show student={props.interview.student}
               interviewer={props.interview.interviewer} /> :
               <Empty />}
-
-
     </article>
   );
 };

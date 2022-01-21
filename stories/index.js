@@ -73,6 +73,9 @@ storiesOf("Button", module)
     ))
     .add("Tuesday", () => (
       <DayList days={days} day={"Tuesday"} setDay={action("setDay")} />
+    ))
+    .add("Wednesday", () => (
+      <DayList days={days} value={"Wednesday"} onChange={action("setDay")} />
     ));
   
   const interviewer = {
@@ -192,7 +195,7 @@ storiesOf("Button", module)
           />
           <Appointment time="5pm" />
         </Fragment>
-      ))
+      ));
 
 
 
