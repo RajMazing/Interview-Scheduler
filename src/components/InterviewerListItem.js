@@ -4,7 +4,7 @@ import "components/InterviewerListItem.scss";
 
 export default function InterviewerListItem(props) {
   const { name, avatar, selected, setInterviewer } = props;
-  const interviewersClass = classNames(
+  const interviewersClass = classnames(
     "interviewers__item",
     {"interviewers__item--selected": selected}
   );
