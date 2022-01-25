@@ -4,7 +4,7 @@ import React from "react";
 
 
 export default function Error(props) {
-
+const { onClose } = props;
 
   return (
     <main className="appointment__card appointment__card--error">
@@ -16,7 +16,7 @@ export default function Error(props) {
     className="appointment__error-close"
     src="images/close.png"
     alt="Close"
-    onClick={props.onClose}
+    onClick={onClose}
   />
 </main>
   )
