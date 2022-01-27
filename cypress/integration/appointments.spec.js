@@ -39,6 +39,7 @@ describe("Appointments", () => {
     cy.contains("Deleting").should("exist");
     cy.contains("Deleting").should("not.exist");
 
-    cy.contains(".appointment__card--show", "Archie Cohen").should("not.exist");
+    cy.contains(".appointment__card--show", "Archie Cohen")
+    .should("not.exist");
   });
 });
