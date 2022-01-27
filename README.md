@@ -1,8 +1,8 @@
 # Interview Scheduler
 
-(Interviewer.gif)
+![](https://raw.githubusercontent.com/RajMazing/Interview-Scheduler/master/Interviewer.gif)
 
-![](InterviewerVid.gif)
+![](https://raw.githubusercontent.com/RajMazing/Interview-Scheduler/master/InterviewVid.gif)
 
 
 
