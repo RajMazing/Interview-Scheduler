@@ -1,5 +1,16 @@
 # Interview Scheduler
 
+(Interviewer.gif)
+
+![](InterviewerVid.gif)
+
+
+
+
+
+
+
+
 ## Setup
 
 Install dependencies with `npm install`.
