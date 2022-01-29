@@ -1,8 +1,5 @@
-# Interview Scheduler -Casey Bassaragh
+# Interview Scheduler - Casey Bassaragh
 
-
-
-# Project Description
 A React Application that allows a user to create, book, save, edit and delete interview appointments that are stored within a server database. 
 
 
