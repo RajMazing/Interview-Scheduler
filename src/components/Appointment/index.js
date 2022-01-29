@@ -26,9 +26,6 @@ export default function Appointment(props) {
   );
 
   function save(name, interviewer) {
-    if (!name || !interviewer) {
-      return console.log("Name and/or interviewer not selected");
-    }
     const interview = {
       student: name,
       interviewer
@@ -36,28 +33,30 @@ export default function Appointment(props) {
 
     transition(SAVING);
     bookInterview(id, interview)
-    .then(() => {
-      transition(SHOW);
-    });
-    bookInterview(id, interview)
     .then(() => transition(SHOW))
-    .catch(error => transition(ERROR_SAVE, true));
+    .catch(error => {
+      console.log("this is error", error)
+      transition(ERROR_SAVE, true)});
+  
+
+
+    // transition(SAVING);
+    // bookInterview(id, interview)
+    // .then(() => {
+    //   transition(SHOW);
+    // });
+    // bookInterview(id, interview)
+    // .then(() => transition(SHOW))
+    // .catch(error => transition(ERROR_SAVE, true));
   }
 
-  function deleting(name, interviewer) {
-    const interview = {
-      student: name,
-      interviewer
-    };
-    transition(DELETING);
-    cancelInterview(id, interview)
+  function deleting() {
+    transition(DELETING, true);
+    cancelInterview(id)
     .then(() => {
       transition(EMPTY);
-    });
-    transition(DELETING, true);
-    cancelInterview(props.id)
-    .then(() => transition(EMPTY))
-    .catch(error => transition(ERROR_DELETE, true));
+    })
+    .catch(error => transition(ERROR_DELETE, true))
   }
 
   return (
@@ -102,7 +101,7 @@ export default function Appointment(props) {
 
       {mode === ERROR_SAVE && (
         <Error 
-        message="Couldnot save appointment."
+        message="Could not save appointment."
         onClose={() => back(SHOW)}
       />)}
 

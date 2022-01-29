@@ -50,7 +50,7 @@ const [state, setState] = useState({
         setState({ ...state, appointments });
       })
       .then(() => { return usedVacancies(); })
-      .catch(error => console.log(error));
+      
   }
 
   // deleting interviews
@@ -67,7 +67,7 @@ const [state, setState] = useState({
         setState({ ...state, appointment });
       })
       .then(() => { return usedVacancies(); })
-      .catch(error => console.log(error));
+      
   }
   return { state, setDay, bookInterview, cancelInterview };
 }
