@@ -35,7 +35,7 @@ export default function Appointment(props) {
     bookInterview(id, interview)
     .then(() => transition(SHOW))
     .catch(error => {
-      console.log("this is error", error)
+      console.log("this is error",error)
       transition(ERROR_SAVE, true)});
   
 
@@ -76,8 +76,8 @@ export default function Appointment(props) {
       {mode === SHOW && (
         <Show
           student={interview.student}
-          interviewer={interview.interviewer.name}
-          // put this in code to check in case it breaks ? interview.interviewer.name : null
+          interviewer={(interview.interviewer || {}).name}
+          
           onEdit={() => transition(EDIT)}
           onDelete={() => transition(CONFIRM)}
         />
@@ -114,3 +114,5 @@ export default function Appointment(props) {
     </article>
   );
 }
+
+// put this in code to check in case it breaks ? interview.interviewer.name : null
